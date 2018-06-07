@@ -1,0 +1,4 @@
+# This is used by Travis CI site in order test online
+
+script:
+  - ./facebook_spider
