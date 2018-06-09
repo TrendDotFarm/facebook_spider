@@ -1,3 +1,10 @@
 #!/bin/sh
 
+if [ $# -ne 2 ]
+then
+    echo "usage: $0 <page_name> <access_token>" >&2
+    exit 1
+fi
+PAGE="$1"
+ACCESS_TOKEN="$2"
 expr length "$ACCESS_TOKEN"
