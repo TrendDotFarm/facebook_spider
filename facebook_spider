@@ -7,4 +7,3 @@ then
 fi
 PAGE="$1"
 ACCESS_TOKEN="$2"
-expr length "$ACCESS_TOKEN"
