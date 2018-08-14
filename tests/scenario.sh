@@ -1,7 +1,9 @@
 #!/bin/sh
 set -ev
 
-# Make facebook.com redirect to localhost
+# Redirect facebook.com to localhost
+cp /etc/hosts hosts.bak
+echo "127.0.0.1 facebook.com" | sudo tee -a /etc/hosts
 
 # Launch a MockWebServer
 
@@ -20,5 +22,5 @@ cmp output.json theguardian.exected_output.json
 (! ../facebook_spider theguardian foo_token)
 
 # Restore facebook.com address resolution and cleanup
-
+mv hosts.bak /etc/hosts
 rm output.json
