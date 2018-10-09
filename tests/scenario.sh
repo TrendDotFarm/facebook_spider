@@ -1,5 +1,4 @@
-#!/bin/sh
-set -ev
+#!/bin/sh -ev
 
 # Redirect facebook.com to localhost
 cp /etc/hosts hosts.bak
